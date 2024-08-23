@@ -14,20 +14,13 @@
 
 #include "AmeliaSkewT/sounding_window.h"
 
-int argv_size(char *argv[]) {
-    int count = 0; 
-    while(argv[++count] != NULL);
-
-    return count;
-}
-
 int main(int argc, char *argv[]) {
-    if(argc == 0) {
+    if(argc == 1) {
         std::cout << "Running GUI" << std::endl;
     } else {
         std::cout << "Running CLI. Args are" << std::endl;
 
-        for(int i = 0; i < argv_size(argv); i++) {
+        for(int i = 0; i < argc; i++) {
             std::cout << argv[i] << std::endl;
         }
     }
